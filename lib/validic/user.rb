@@ -18,12 +18,7 @@ module Validic
       params = extract_params(params)
       get_endpoint(:users, params)
     end
-    
-    def refresh_token(options = {})
-        response = get_request(:refresh_token, options)
-        Validic::User.new(response['user'])
-    end
-
+  
     ##
     # Get User id base on `access_token`
     #
